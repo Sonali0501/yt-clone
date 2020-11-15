@@ -5,7 +5,7 @@ const navButtonMobile = document.getElementById('navbtn_mobile');
 const root = document.documentElement;
 const main = document.getElementById('main');
 const newsdiv = document.getElementById('news-div');
-const frnd = document.getElementById('frnd');
+const frnd = document.getElementById('friends');
 const news = document.getElementById('news');
 const cancelbtn = document.getElementById('cancelbtn');
 const showmore = document.getElementById('showmore');
@@ -13,6 +13,21 @@ const showless = document.getElementById('showless');
 const modal = document.getElementById('modal');
 
 window.onresize = resize;
+
+function search() { 
+    let input = document.getElementById('searchbar').value 
+    input=input.toLowerCase(); 
+    let x = document.getElementsByClassName('friends'); 
+    if (input=='friends') { 
+        frnd.style.display="block";
+        main.style.display="none";                  
+    } 
+    else {
+        frnd.style.display="none";
+        main.style.display="block";
+    }
+     
+}
 
 function OpenModal(){
     if (modal.style.display == "none"){

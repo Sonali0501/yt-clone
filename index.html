@@ -24,8 +24,8 @@
             </ul>
 
             <div class="search">
-                <input type="text" name="search" id='search' placeholder="Search">
-                <span class="searchbtn">
+                <input type="text" name="search" id='searchbar' placeholder="Search">
+                <span class="searchbtn" onclick="search()">
                     <i class="fas fa-search"></i>
                 </span>
             </div>
@@ -61,24 +61,36 @@
 
         <div class="modal" id="modal" style="display:none">
             
-                <h4>Notifications</h4>
-                <hr>
-                <ul>
-                    <li>
-                        Notification 1
-                    </li>
-                    <li>
-                        Notification 1
-                    </li>
-                    <li>
-                        Notification 1
-                    </li>
-                    <li>
-                        Notification 1
-                    </li>
-                </ul>
-            
-        </div>
+            <h4>Notifications</h4>
+            <hr>
+            <table style="width:100%">
+                <tr>
+                  <td><img src="images/dog.jpg"></td>
+                  <td>Notifications about recent uploads will appear here</td>
+                </tr>
+                <tr>
+                  <td><img src="images/dog.jpg"></td>
+                  <td>Notifications about recent uploads will appear here</td>
+                </tr>
+                <tr>
+                  <td><img src="images/dog.jpg"></td>
+                  <td>Notifications about recent uploads will appear here</td>
+                </tr>
+                <tr>
+                    <td><img src="images/dog.jpg"></td>
+                    <td>Notifications about recent uploads will appear here</td>
+                  </tr>
+                  <tr>
+                    <td><img src="images/dog.jpg"></td>
+                    <td>Notifications about recent uploads will appear here</td>
+                  </tr>
+                  <tr>
+                    <td><img src="images/dog.jpg"></td>
+                    <td>Notifications about recent uploads will appear here</td>
+                  </tr>
+              </table>
+        
+    </div>
     </header>
 
 
@@ -293,34 +305,44 @@
             </div>
         </div>
 
-        <div class="container" id="frnd" style="display: none;">
-        <div class="row">
-        <div class="item" style="width: 24%;">
-            <div class="thumb">
-                <img src="images/friends.jpg" onmouseover="this.src='images/monica.gif'" onmouseout="this.src='images/friends.jpg'">
-            </div>
-            <div class="details">
-                <div class="profile-pic">
-                </div>
-                <div class="video-details">
-                    <div class="title">
-                        Friends- Monica and Chandler Favourites
+        <div class="container" id="friends" style="display: none;">
+            <div class="row">
+            <div class="item" style="width: 24%;">
+                <div class="thumb"  onmouseover="document.getElementById('over1').style.display='block'" onmouseleave="document.getElementById('over1').style.display='none'">
+                    <img src="images/friends.jpg" onmouseover="this.src='images/monica.gif'" onmouseout="this.src='images/friends.jpg'">
+                    <div class="over" id="over1" >
+                        <span class="fas fa-clock" onmouseover="document.getElementById('desc1').style.display='block'" onmouseleave="document.getElementById('desc1').style.display='none'"></span><br>
+                        <span class="fas fa-stream"></span>
                     </div>
-                    <div class="channel">Channel 1</div>
-                    <div class="views">17k views 
-                        <span class="uploaded">2days ago</span>
+                    <p class="desc" id="desc1">Watch Later</p>
+                </div>
+                <div class="details">
+                    <div class="profile-pic">
+                    </div>
+                    <div class="video-details">
+                        <div class="title">
+                            Friends- Monica and Chandler Favourites
+                        </div>
+                        <div class="channel">Channel 1</div>
+                        <div class="views">17k views 
+                            <span class="uploaded">2days ago</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
-        </div>
+            </div>
+            </div>
 
         <div class="container" id="main">
             <div class="row">
                 <div class="item">
-                    <div class="thumb">
+                    <div class="thumb" onmouseover="document.getElementById('over').style.display='block'" onmouseleave="document.getElementById('over').style.display='none'">
                         <img src="images/friends.jpg" onmouseover="this.src='images/monica.gif'" onmouseout="this.src='images/friends.jpg'">
+                        <div class="over" id="over" >
+                            <span class="fas fa-clock" onmouseover="document.getElementById('desc').style.display='block'" onmouseleave="document.getElementById('desc').style.display='none'"></span><br>
+                            <span class="fas fa-stream"></span>
+                        </div>
+                        <p class="desc" id="desc">Watch Later</p>
                     </div>
                     <div class="details">
                         <div class="profile-pic">
